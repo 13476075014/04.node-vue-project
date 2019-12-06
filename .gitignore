@@ -1,0 +1,7 @@
+node_modules/
+**/*.log
+**/*/node_modules/
+01.paypal/
+
+.vscode
+package-lock.json
