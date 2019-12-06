@@ -52,7 +52,7 @@ var html_plugins = function () {
         //如果和入口js文件同名
         if (filename in entriesFiles) {
             conf.inject = 'body' //注入的script在html文件的body底部
-            // conf.chunks = ['vendor', filename] //选择需要注入的上面入口文件打包的文件
+            conf.chunks = [filename] //选择需要注入的上面入口文件打包的文件
         }
         //跨页面引用，如pageA,pageB 共同引用了common-a-b.js，那么可以在这单独处理
         //if(pageA|pageB.test(filename)) conf.chunks.splice(1,0,'common-a-b')
