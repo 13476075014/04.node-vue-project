@@ -1,3 +1,11 @@
+*目录解释：
+
+  01.simplyHtml：这个文件夹是完整的基础版的，html的webpack多入口的静态打包方式。
+
+  
+
+
+* 以第一个文件夹01.simplyHtml的最简单的html 的多入口为例子
 ## 一：demo目的：
 如何通过webpack和node来实现多个静态页面html,多个入口，能打包，能热加载，能开发环境调试，能生成dist里面的线上需要文件；
 
@@ -10,7 +18,7 @@
 	解决思路：不能用webpack-dev-server,因为现在是多个单页需要访问，用这个插件用到的"webpack-dev-middleware": "^1.12.2（这个版本过高会报错我这边。。，这个版本是可以的）" 和 "webpack-hot-middleware": "^2.25.0"，这两个插件来实现开发环境，读取内存里面的打包完的文件，然后通过名字匹配node的路由来进行访问；
 
 ## 三：目录结构
- ![image](./public/file.png)
+ ![image](./file.png)
 
 dist -- 打包后的文件存放地址，正式环境只需要这个里面的文件就可以了；
 public -- 静态资源 图片,css，js 的存放地址；

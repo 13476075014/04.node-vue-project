@@ -1,0 +1,12 @@
+<!-- 
+    引入公用的头部，
+    这里用的语法因为是用的ejs-loader编译的，所以需要遵从其语法 <%=require('')({}) %>
+    而不是像ejs语法那样的 <%-include('',{}) %>
+ -->
+ <%=require('_common/common_header.ejs')({title:'this is two'}) %>
+</head>
+<body>
+    <h1>这是2</h1>
+
+<!-- 引入的公用的底部 -->
+<%=require('_common/common_bottom.ejs')() %>
