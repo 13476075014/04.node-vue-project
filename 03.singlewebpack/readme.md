@@ -1,6 +1,7 @@
 *目录解释：
 
   01.simplyHtml：这个文件夹是完整的基础版的，html的webpack多入口的静态打包方式。
+  02.ejsHtml:这个文件夹是如何用webpack打包ejs的多入口的静态文件。
 
   
 

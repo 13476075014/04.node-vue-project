@@ -31,7 +31,7 @@ var entries = function () {
 }
 //html_webpack_plugins 定义
 var html_plugins = function () {
-    var entryHtml = glob.sync(viewDir + '/1.ejs')
+    var entryHtml = glob.sync(viewDir + '/*.ejs')
     var r = []
     var entriesFiles = entries()
     for (var i = 0; i < entryHtml.length; i++) {
@@ -157,10 +157,12 @@ function webpackConfig(options){
         plugins: plugins.concat(html_plugins())
     }
 
+    config.plugins.push(new CleanWebpackPlugin()) // 清除dist
     if(debug){
-        config.devtool = 'cheap-module-eval-source-map'
+        // config.devtool = 'cheap-module-eval-source-map'
+        config.devtool = 'source-map'
     } else{
-        config.plugins.push(new CleanWebpackPlugin())
+        //config.plugins.push(new CleanWebpackPlugin())
     }
     return config;
 }

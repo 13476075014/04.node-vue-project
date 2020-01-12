@@ -1,4 +1,4 @@
-// import '../a.js'
-// import '../b.js'
+import {a} from '../a.js'
+import {b} from '../b.js'
 
 console.log(666)

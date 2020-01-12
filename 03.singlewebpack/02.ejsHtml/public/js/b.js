@@ -1,1 +1,4 @@
-console.log('b')
+// console.log('b')
+exports.b={
+    name:'b'
+}

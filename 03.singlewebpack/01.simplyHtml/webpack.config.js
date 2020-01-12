@@ -150,6 +150,7 @@ function webpackConfig(options){
         plugins: plugins.concat(html_plugins())
     }
 
+    config.plugins.push(new CleanWebpackPlugin())
     if(debug){
         config.devServer={
             // historyApiFallback: { //设置如果找不到页面就回到这个默认页面
@@ -168,7 +169,7 @@ function webpackConfig(options){
         }
         config.devtool = 'cheap-module-eval-source-map'
     } else{
-        config.plugins.push(new CleanWebpackPlugin())
+        // config.plugins.push(new CleanWebpackPlugin())
     }
     return config;
 }
