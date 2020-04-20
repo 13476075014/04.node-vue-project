@@ -4,6 +4,8 @@ var webpack = require("webpack");
 var path = require("path");
 var glob = require('glob') //获取全部文件的插件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const en = require('./public/lang/en.js')
+const yd = require('./public/lang/yd.js')
 
 //路径定义
 var publicDir = path.resolve(__dirname, './public'); //获取所有静态资源文件绝对路径
@@ -77,6 +79,11 @@ function webpackConfig(options){
     //     name: 'vendor',
     //     minChunks: Infinity
     // }));
+
+    plugins.push(new webpack.DefinePlugin({
+        _lg_en:JSON.stringify(en._lg), //英语
+        _lg_yd:JSON.stringify(yd._lg) //印地语
+    }))
    
 
     if(debug){
