@@ -40,28 +40,6 @@ program
    /**
     * @param {要被翻译的json对象} json_obj
     * @param {需要翻译成什么语言} language
-    */  
-   init(json_obj,language){
-       let i=0
-       for(let item in json_obj){
-           if(typeof json_obj[item] == "object" && Object.keys(json_obj[item]).length){
-               this.init(json_obj[item],language)
-           }else if(item != 'name'){
-            this.translate_arr.push(json_obj[item])
-            json_obj[item] = i;
-            i++;
-            if(item == "end"){
-                //读完了所有的对象
-                this.my_translate(language,JSON.stringify(this.translate_arr),function(res){
-                    // console.log(res)
-                })
-            }
-           }
-       }
-   }
-   /**
-    * @param {要被翻译的json对象} json_obj
-    * @param {需要翻译成什么语言} language
     * 一句句的去请求翻译，上面的方法是一次全部请求
     */  
    init2(json_obj,language){
@@ -102,7 +80,6 @@ program
 
 if(program.translate){
     //执行下面命令的时候会触发这个指令，参数通过@分开；
-    //"translate":"node ./lop_server/mobile/checksum/google.js -t hi@lj"
     new google_translate(program.translate[0],path.resolve(program.translate[1]))
 }
 

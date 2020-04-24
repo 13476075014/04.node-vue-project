@@ -81,8 +81,8 @@ function webpackConfig(options){
     // }));
 
     plugins.push(new webpack.DefinePlugin({
-        _lg_en:JSON.stringify(en._lg), //英语
-        _lg_yd:JSON.stringify(yd._lg) //印地语
+        _lg_en:JSON.stringify(en), //英语
+        _lg_yd:JSON.stringify(yd) //印地语
     }))
    
 

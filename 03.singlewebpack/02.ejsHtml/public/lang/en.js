@@ -1,4 +1,4 @@
-exports._lg = {
+module.exports = {
     name:"english", //语言名称
     common:{ //公用部分
         success:"Success",
@@ -8,6 +8,6 @@ exports._lg = {
         title:"Home1",
     },
     end:{
-        
+
     }
 }

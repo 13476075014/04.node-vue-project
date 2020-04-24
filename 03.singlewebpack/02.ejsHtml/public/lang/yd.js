@@ -1,4 +1,4 @@
-exports._lg = {
+module.exports = {
     name:"hindi", //语言名称
     common:{ //公用部分
         success:"सफलता",
