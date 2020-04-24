@@ -6,5 +6,8 @@ exports._lg = {
     },
     index:{ //首页翻译配置
         title:"Home1",
+    },
+    end:{
+        
     }
 }

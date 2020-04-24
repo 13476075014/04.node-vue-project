@@ -10,12 +10,14 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "commander": "^5.0.0",
     "cross-env": "^5.2.1",
     "css-loader": "^3.2.1",
     "ejs-loader": "^0.3.5",
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "glob": "^7.1.6",
+    "google-translate-api": "^2.3.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.1",
@@ -27,7 +29,8 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development node --inspect=9222 main.js",
-    "prodbuild": "cross-env NODE_ENV=production npx webpack"
+    "prodbuild": "cross-env NODE_ENV=production npx webpack",
+    "translate": "node ./translate.js -t hi@./public/lang/en.js"
   },
   "config": {},
   "husky": {

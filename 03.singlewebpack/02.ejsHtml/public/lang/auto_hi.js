@@ -1,0 +1,1 @@
+module.exports ={"name":"hi","common":{"success":"सफलता","fail":"विफल"},"index":{"title":"घर 1"},"end":""}
