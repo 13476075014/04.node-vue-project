@@ -14,12 +14,13 @@ module.exports = {
       // 'ejs'
   ],
   "parserOptions": {
-      "ecmaVersion": 2018
+      "ecmaVersion": 2018,
+      sourceType: 'module'
   },
   "rules": {
-      "no-console": 1,
+      "no-console": 0,
       'eqeqeq': 0,
-      "no-unused-vars": 2,//禁止出现未使用过的变量
+      "no-unused-vars":1, //警告声明了变量但是没有使用过
       "no-extra-semi":0, //可以用分号
       "no-inner-declarations":0,//可以在内部声明函数
   }
