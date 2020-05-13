@@ -62,8 +62,11 @@ program
                  if(item == 'end'){
                     let result = "module.exports =";
                     result += JSON.stringify(json_obj);
-                    let result_file_path = _this.json_path.split('/')
-                    result_file_path =((result_file_path.slice(0,result_file_path.length-1)).join('/')) + ('/auto_' + _this.to_language + '.js')
+                    let result_file_path = _this.json_path.split('')
+                    result_file_path.splice(-5,5,'auto_' + _this.to_language + '.js');
+                    result_file_path = result_file_path.join('')
+                    
+                    // result_file_path =((result_file_path.slice(0,result_file_path.length-1)).join('/')) + ('/auto_' + _this.to_language + '.js')
                     fs.writeFile(path.resolve(__dirname,result_file_path),result,'utf8',err =>{
                         if(err){
                             console.error("错啦文件生成",err)
